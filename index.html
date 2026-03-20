@@ -18,6 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Noto+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/article-style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js" defer></script>
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -39,84 +40,222 @@
     "url": "https://cloudpipe-landing.vercel.app"
   }
 }</script>
+  <style>
+    .search-bar { display:flex; gap:0.75rem; margin:1.5rem 0; flex-wrap:wrap; }
+    .search-bar input { flex:1; min-width:200px; padding:0.75rem 1rem; border:1px solid var(--border,rgba(212,165,116,0.15)); border-radius:8px; background:var(--bg-card,#141721); color:var(--cream,#f0ece2); font-size:1rem; outline:none; }
+    .search-bar input:focus { border-color:var(--gold,#d4a574); box-shadow:0 0 0 2px rgba(212,165,116,0.2); }
+    .search-bar select { padding:0.75rem; border:1px solid var(--border); border-radius:8px; background:var(--bg-card); color:var(--cream); font-size:0.9rem; }
+    .filter-bar { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1.5rem; }
+    .filter-btn { padding:0.5rem 1rem; border:1px solid var(--border); border-radius:20px; background:transparent; color:var(--text-secondary,#9a9590); cursor:pointer; font-size:0.85rem; transition:all 0.2s; }
+    .filter-btn:hover,.filter-btn.active { background:var(--gold,#d4a574); color:var(--bg-deep,#0c0e14); border-color:var(--gold); }
+    .card-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:1.25rem; }
+    .card { background:var(--bg-card,#141721); border:1px solid var(--border); border-radius:12px; padding:1.25rem; transition:transform 0.2s, box-shadow 0.2s; cursor:pointer; text-decoration:none; display:block; }
+    .card:hover { transform:translateY(-3px); box-shadow:0 8px 25px rgba(0,0,0,0.3); border-color:var(--gold); }
+    .card-industry { display:inline-block; font-size:0.75rem; padding:0.2rem 0.6rem; border-radius:12px; background:rgba(212,165,116,0.15); color:var(--gold); margin-bottom:0.5rem; }
+    .card h3 { color:var(--cream,#f0ece2); font-size:1.05rem; line-height:1.5; margin:0 0 0.5rem; font-weight:500; }
+    .card-meta { color:var(--text-secondary); font-size:0.8rem; display:flex; gap:1rem; }
+    .card-tags { display:flex; gap:0.4rem; flex-wrap:wrap; margin-top:0.6rem; }
+    .card-tags span { font-size:0.7rem; padding:0.15rem 0.5rem; border-radius:8px; background:rgba(255,255,255,0.05); color:var(--text-secondary); }
+    .pagination { display:flex; justify-content:center; gap:0.5rem; margin:2rem 0; flex-wrap:wrap; }
+    .pagination button { padding:0.5rem 1rem; border:1px solid var(--border); border-radius:8px; background:transparent; color:var(--cream); cursor:pointer; }
+    .pagination button.active { background:var(--gold); color:var(--bg-deep); }
+    .pagination button:disabled { opacity:0.3; cursor:default; }
+    .results-info { color:var(--text-secondary); font-size:0.85rem; margin-bottom:1rem; }
+    @media(max-width:600px) { .card-grid { grid-template-columns:1fr; } .search-bar { flex-direction:column; } }
+  </style>
 </head>
 <body>
   <header class="site-header">
     <h1>澳門百科</h1>
     <p class="subtitle">Macau Encyclopedia — 探索澳門四大區域：美食、世界遺產、購物、娛樂深度指南</p>
-    <p class="stats">53 篇文章 | 75,352 字 | 4 個分類</p>
+    <p class="stats">57 篇文章 | 82,003 字 | 4 個分類</p>
   </header>
   <main class="index-main">
-    
-    <section class="industry-section">
-      <h2>美食 (26 篇)</h2>
-      <ul class="article-list"><li><a href="articles/macau-dining-cha-chaan-teng-macau-peninsula-澳門半島茶餐廳全攻略-品味在地庶民美食-849146.html">澳門半島茶餐廳全攻略：品味在地庶民美食</a> <span class="count">1295字</span></li>
-<li><a href="articles/macau-dining-cha-chaan-teng-taipa-澳門氹仔茶餐廳全攻略-道地風味與新潮滋味完美融合-151e5d.html">澳門氹仔茶餐廳全攻略：道地風味與新潮滋味完美融合</a> <span class="count">1617字</span></li>
-<li><a href="articles/macau-dining-cha-chaan-teng-cotai-路氹城茶餐廳全攻略-品味澳門氹仔的港式風情-dff39b.html">路氹城茶餐廳全攻略：品味澳門氹仔的港式風情</a> <span class="count">1611字</span></li>
-<li><a href="articles/macau-dining-cha-chaan-teng-coloane-路環茶餐廳-澳門路環的在地美味探索-7231db.html">路環茶餐廳：澳門路環的在地美味探索</a> <span class="count">1411字</span></li>
-<li><a href="articles/macau-dining-desserts-taipa-氹仔甜品天堂-融匯東西的澳門甜蜜驛站-e0f4e0.html">氹仔甜品天堂：融匯東西的澳門甜蜜驛站</a> <span class="count">1517字</span></li>
-<li><a href="articles/macau-dining-desserts-macau-peninsula-澳門半島甜品巡禮-傳統與創新的甜蜜交融-af9a72.html">澳門半島甜品巡禮：傳統與創新的甜蜜交融</a> <span class="count">1819字</span></li>
-<li><a href="articles/macau-dining-desserts-cotai-路氹甜品美食全攻略-精選5大人氣店家與必嘗經典-b0e5a0.html">路氹甜品美食全攻略：精選5大人氣店家與必嘗經典</a> <span class="count">1927字</span></li>
-<li><a href="articles/macau-dining-desserts-coloane-路環甜品尋味指南-澳門葡式風情的甜蜜滋味-2688ef.html">路環甜品尋味指南：澳門葡式風情的甜蜜滋味</a> <span class="count">1592字</span></li>
-<li><a href="articles/macau-dining-dim-sum-taipa-氹仔葡撻-澳門最道地的酥皮蛋香滋味-21c586.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a> <span class="count">1040字</span></li>
-<li><a href="articles/macau-dining-dim-sum-macau-peninsula-氹仔葡撻-澳門最道地的酥皮蛋香滋味-6eafd7.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a> <span class="count">1040字</span></li>
-<li><a href="articles/macau-dining-dim-sum-cotai-氹仔葡撻-澳門最道地的酥皮蛋香滋味-16be91.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a> <span class="count">1040字</span></li>
-<li><a href="articles/macau-dining-egg-tart-taipa-氹仔葡撻-澳門最道地的酥皮蛋香滋味-d3956d.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a> <span class="count">1040字</span></li>
-<li><a href="articles/macau-dining-egg-tart-coloane-氹仔葡撻-澳門最道地的酥皮蛋香滋味-cae2a9.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a> <span class="count">1040字</span></li>
-<li><a href="articles/macau-dining-egg-tart-macau-peninsula-氹仔葡撻-澳門最道地的酥皮蛋香滋味-b24bf9.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a> <span class="count">1040字</span></li>
-<li><a href="articles/macau-dining-macanese-fusion-taipa-氹仔葡撻-澳門最道地的酥皮蛋香滋味-605c43.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a> <span class="count">1040字</span></li>
-<li><a href="articles/macau-dining-macanese-fusion-cotai-氹仔葡撻-澳門最道地的酥皮蛋香滋味-435d34.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a> <span class="count">1040字</span></li>
-<li><a href="articles/macau-dining-macanese-fusion-coloane-氹仔葡撻-澳門最道地的酥皮蛋香滋味-9ebbea.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a> <span class="count">1040字</span></li>
-<li><a href="articles/macau-dining-portuguese-cuisine-macau-peninsula-氹仔葡撻-澳門最道地的酥皮蛋香滋味-93fcae.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a> <span class="count">1040字</span></li>
-<li><a href="articles/macau-dining-portuguese-cuisine-coloane-氹仔葡撻-澳門最道地的酥皮蛋香滋味-91c02e.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a> <span class="count">1040字</span></li>
-<li><a href="articles/macau-dining-portuguese-cuisine-taipa-氹仔葡撻-澳門最道地的酥皮蛋香滋味-6f6f7a.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a> <span class="count">1040字</span></li>
-<li><a href="articles/macau-dining-seafood-taipa-氹仔葡撻-澳門最道地的酥皮蛋香滋味-1b6f1e.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a> <span class="count">1040字</span></li>
-<li><a href="articles/macau-dining-seafood-cotai-氹仔葡撻-澳門最道地的酥皮蛋香滋味-4d8719.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a> <span class="count">1040字</span></li>
-<li><a href="articles/macau-dining-seafood-macau-peninsula-氹仔葡撻-澳門最道地的酥皮蛋香滋味-b936d3.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a> <span class="count">1040字</span></li>
-<li><a href="articles/macau-dining-street-food-taipa-氹仔葡撻-澳門最道地的酥皮蛋香滋味-924daa.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a> <span class="count">1040字</span></li>
-<li><a href="articles/macau-dining-street-food-macau-peninsula-氹仔葡撻-澳門最道地的酥皮蛋香滋味-f46cd8.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a> <span class="count">1040字</span></li>
-<li><a href="articles/macau-dining-street-food-cotai-氹仔葡撻-澳門最道地的酥皮蛋香滋味-bd0ad3.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a> <span class="count">1040字</span></li></ul>
-    </section>
-    <section class="industry-section">
-      <h2>娛樂 (4 篇)</h2>
-      <ul class="article-list"><li><a href="articles/macau-entertainment-integrated-resorts-coloane-coloane-integrated-resorts-56d3fa.html">coloane integrated-resorts</a> <span class="count">1979字</span></li>
-<li><a href="articles/macau-entertainment-integrated-resorts-taipa-氹仔綜合度假村全攻略-奢華體驗與娛樂天堂-ef61fe.html">氹仔綜合度假村全攻略：奢華體驗與娛樂天堂</a> <span class="count">1291字</span></li>
-<li><a href="articles/macau-entertainment-integrated-resorts-macau-peninsula-澳門半島綜合度假村全攻略-繁華都市中的奢華體驗-6d0ade.html">澳門半島綜合度假村全攻略：繁華都市中的奢華體驗</a> <span class="count">1864字</span></li>
-<li><a href="articles/macau-entertainment-integrated-resorts-cotai-路氹城綜合度假村-亞洲拉斯維加斯的娛樂奇境-b9f2b2.html">路氹城綜合度假村：亞洲拉斯維加斯的娛樂奇境</a> <span class="count">1970字</span></li></ul>
-    </section>
-    <section class="industry-section">
-      <h2>購物 (8 篇)</h2>
-      <ul class="article-list"><li><a href="articles/macau-shopping-antique-shops-macau-peninsula-氹仔奢華購物指南-路氹城頂級商場全攻略-12d621.html">氹仔奢華購物指南：路氹城頂級商場全攻略</a> <span class="count">1450字</span></li>
-<li><a href="articles/macau-shopping-antique-shops-coloane-氹仔奢華購物指南-路氹城頂級商場全攻略-860112.html">氹仔奢華購物指南：路氹城頂級商場全攻略</a> <span class="count">1450字</span></li>
-<li><a href="articles/macau-shopping-antique-shops-cotai-氹仔奢華購物指南-路氹城頂級商場全攻略-e2682e.html">氹仔奢華購物指南：路氹城頂級商場全攻略</a> <span class="count">1450字</span></li>
-<li><a href="articles/macau-shopping-bakery-gifts-cotai-氹仔奢華購物指南-路氹城頂級商場全攻略-2cc143.html">氹仔奢華購物指南：路氹城頂級商場全攻略</a> <span class="count">1450字</span></li>
-<li><a href="articles/macau-shopping-duty-free-cotai-氹仔奢華購物指南-路氹城頂級商場全攻略-81f76e.html">氹仔奢華購物指南：路氹城頂級商場全攻略</a> <span class="count">1450字</span></li>
-<li><a href="articles/macau-shopping-duty-free-coloane-氹仔奢華購物指南-路氹城頂級商場全攻略-7ab1bd.html">氹仔奢華購物指南：路氹城頂級商場全攻略</a> <span class="count">1450字</span></li>
-<li><a href="articles/macau-shopping-duty-free-macau-peninsula-氹仔奢華購物指南-路氹城頂級商場全攻略-48729e.html">氹仔奢華購物指南：路氹城頂級商場全攻略</a> <span class="count">1450字</span></li>
-<li><a href="articles/macau-shopping-local-markets-taipa-氹仔奢華購物指南-路氹城頂級商場全攻略-818d36.html">氹仔奢華購物指南：路氹城頂級商場全攻略</a> <span class="count">1450字</span></li></ul>
-    </section>
-    <section class="industry-section">
-      <h2>旅遊 (15 篇)</h2>
-      <ul class="article-list"><li><a href="articles/macau-tourism-cultural-tours-taipa-氹仔文化旅遊-走進澳門最迷你的世界遺產走廊-33e65f.html">氹仔文化旅遊：走進澳門最迷你的世界遺產走廊</a> <span class="count">1651字</span></li>
-<li><a href="articles/macau-tourism-cultural-tours-macau-peninsula-澳門半島文化之旅-穿越四百年東西文化交匯的時光走廊-6021d9.html">澳門半島文化之旅：穿越四百年東西文化交匯的時光走廊</a> <span class="count">1775字</span></li>
-<li><a href="articles/macau-tourism-cultural-tours-cotai-澳門路氹文化旅遊指南-穿越葡風與現代的時空之旅-f87276.html">澳門路氹文化旅遊指南：穿越葡風與現代的時空之旅</a> <span class="count">2159字</span></li>
-<li><a href="articles/macau-tourism-cultural-tours-coloane-路環文化漫遊-澳門最後的靜謐港灣-409746.html">路環文化漫遊：澳門最後的靜謐港灣</a> <span class="count">1606字</span></li>
-<li><a href="articles/macau-tourism-fortresses-macau-peninsula-澳門半島堡壘巡禮-登高俯瞰古城的歷史軌跡-8f8892.html">澳門半島堡壘巡禮：登高俯瞰古城的歷史軌跡</a> <span class="count">1553字</span></li>
-<li><a href="articles/macau-tourism-fortresses-cotai-路氹古堡探尋指南-從現代度假村到澳門半島歷史要塞-801c57.html">路氹古堡探尋指南：從現代度假村到澳門半島歷史要塞</a> <span class="count">1549字</span></li>
-<li><a href="articles/macau-tourism-fortresses-coloane-路環的防禦與信仰-探索澳門最南端的歷史足跡-44512e.html">路環的防禦與信仰：探索澳門最南端的歷史足跡</a> <span class="count">1451字</span></li>
-<li><a href="articles/macau-tourism-gardens-parks-taipa-氹仔花園公園巡禮-澳門綠洲中的葡式浪漫-0b6ea0.html">氹仔花園公園巡禮：澳門綠洲中的葡式浪漫</a> <span class="count">1697字</span></li>
-<li><a href="articles/macau-tourism-gardens-parks-macau-peninsula-澳門半島公園花園-城市綠洲中的東西方園藝藝術-e1275e.html">澳門半島公園花園：城市綠洲中的東西方園藝藝術</a> <span class="count">1796字</span></li>
-<li><a href="articles/macau-tourism-gardens-parks-cotai-路氹城花園公園巡禮-澳門現代休閒綠洲完整指南-068fb5.html">路氹城花園公園巡禮：澳門現代休閒綠洲完整指南</a> <span class="count">2052字</span></li>
-<li><a href="articles/macau-tourism-gardens-parks-coloane-路環花園公園全攻略-澳門南端的綠色秘境-a8bfeb.html">路環花園公園全攻略：澳門南端的綠色秘境</a> <span class="count">1813字</span></li>
-<li><a href="articles/macau-tourism-temples-churches-taipa-氹仔寺廟與教堂-澳門歷史城區的信仰足跡-16f494.html">氹仔寺廟與教堂：澳門歷史城區的信仰足跡</a> <span class="count">1457字</span></li>
-<li><a href="articles/macau-tourism-temples-churches-macau-peninsula-澳門半島廟宇與教堂-穿越四百年的宗教建築巡禮-9e7a0b.html">澳門半島廟宇與教堂：穿越四百年的宗教建築巡禮</a> <span class="count">1732字</span></li>
-<li><a href="articles/macau-tourism-temples-churches-cotai-路氹城寺廟教堂巡禮-現代都會中的心靈綠洲-37b5b8.html">路氹城寺廟教堂巡禮：現代都會中的心靈綠洲</a> <span class="count">1748字</span></li>
-<li><a href="articles/macau-tourism-temples-churches-coloane-路環寺廟與教堂-澳門靜謐的宗教文化寶藏-4a4215.html">路環寺廟與教堂：澳門靜謐的宗教文化寶藏</a> <span class="count">1100字</span></li></ul>
-    </section>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="搜索文章..." autocomplete="off" />
+      <select id="sortSelect">
+        <option value="newest">最新</option>
+        <option value="quality">品質最高</option>
+        <option value="longest">最多字數</option>
+        <option value="title">標題 A-Z</option>
+      </select>
+    </div>
+    <div class="filter-bar">
+      <button class="filter-btn active" data-industry="all">全部 (57)</button>
+      <button class="filter-btn" data-industry="dining">美食 (28)</button>
+<button class="filter-btn" data-industry="entertainment">娛樂 (4)</button>
+<button class="filter-btn" data-industry="shopping">購物 (8)</button>
+<button class="filter-btn" data-industry="tourism">旅遊 (17)</button>
+
+    </div>
+    <p class="results-info" id="resultsInfo"></p>
+    <div class="card-grid" id="cardGrid"></div>
+    <div class="pagination" id="pagination"></div>
+    <noscript><section><h2>美食 (28)</h2><ul><li><a href="articles/macau-dining-cha-chaan-teng-macau-peninsula-澳門半島茶餐廳全攻略-品味在地庶民美食-849146.html">澳門半島茶餐廳全攻略：品味在地庶民美食</a></li>
+<li><a href="articles/macau-dining-cha-chaan-teng-taipa-澳門氹仔茶餐廳全攻略-道地風味與新潮滋味完美融合-151e5d.html">澳門氹仔茶餐廳全攻略：道地風味與新潮滋味完美融合</a></li>
+<li><a href="articles/macau-dining-cha-chaan-teng-cotai-路氹城茶餐廳全攻略-品味澳門氹仔的港式風情-dff39b.html">路氹城茶餐廳全攻略：品味澳門氹仔的港式風情</a></li>
+<li><a href="articles/macau-dining-cha-chaan-teng-coloane-路環茶餐廳-澳門路環的在地美味探索-7231db.html">路環茶餐廳：澳門路環的在地美味探索</a></li>
+<li><a href="articles/macau-dining-desserts-taipa-氹仔甜品天堂-融匯東西的澳門甜蜜驛站-e0f4e0.html">氹仔甜品天堂：融匯東西的澳門甜蜜驛站</a></li>
+<li><a href="articles/macau-dining-desserts-macau-peninsula-澳門半島甜品巡禮-傳統與創新的甜蜜交融-af9a72.html">澳門半島甜品巡禮：傳統與創新的甜蜜交融</a></li>
+<li><a href="articles/macau-dining-desserts-cotai-路氹甜品美食全攻略-精選5大人氣店家與必嘗經典-b0e5a0.html">路氹甜品美食全攻略：精選5大人氣店家與必嘗經典</a></li>
+<li><a href="articles/macau-dining-desserts-coloane-路環甜品尋味指南-澳門葡式風情的甜蜜滋味-2688ef.html">路環甜品尋味指南：澳門葡式風情的甜蜜滋味</a></li>
+<li><a href="articles/macau-dining-dim-sum-taipa-氹仔葡撻-澳門最道地的酥皮蛋香滋味-21c586.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a></li>
+<li><a href="articles/macau-dining-dim-sum-macau-peninsula-氹仔葡撻-澳門最道地的酥皮蛋香滋味-6eafd7.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a></li>
+<li><a href="articles/macau-dining-dim-sum-cotai-氹仔葡撻-澳門最道地的酥皮蛋香滋味-16be91.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a></li>
+<li><a href="articles/macau-dining-egg-tart-taipa-氹仔葡撻-澳門最道地的酥皮蛋香滋味-d3956d.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a></li>
+<li><a href="articles/macau-dining-egg-tart-coloane-氹仔葡撻-澳門最道地的酥皮蛋香滋味-cae2a9.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a></li>
+<li><a href="articles/macau-dining-egg-tart-macau-peninsula-氹仔葡撻-澳門最道地的酥皮蛋香滋味-b24bf9.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a></li>
+<li><a href="articles/macau-dining-fine-dining-taipa-氹仔fine-dining-澳門離島上的精緻美食殿堂-8e1841.html">氹仔Fine Dining：澳門離島上的精緻美食殿堂</a></li>
+<li><a href="articles/macau-dining-fine-dining-macau-peninsula-澳門半島精緻餐飲指南-米芝蓮星級饗宴-97853f.html">澳門半島精緻餐飲指南：米芝蓮星級饗宴</a></li>
+<li><a href="articles/macau-dining-macanese-fusion-taipa-氹仔葡撻-澳門最道地的酥皮蛋香滋味-605c43.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a></li>
+<li><a href="articles/macau-dining-macanese-fusion-cotai-氹仔葡撻-澳門最道地的酥皮蛋香滋味-435d34.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a></li>
+<li><a href="articles/macau-dining-macanese-fusion-coloane-氹仔葡撻-澳門最道地的酥皮蛋香滋味-9ebbea.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a></li>
+<li><a href="articles/macau-dining-portuguese-cuisine-macau-peninsula-氹仔葡撻-澳門最道地的酥皮蛋香滋味-93fcae.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a></li>
+<li><a href="articles/macau-dining-portuguese-cuisine-coloane-氹仔葡撻-澳門最道地的酥皮蛋香滋味-91c02e.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a></li>
+<li><a href="articles/macau-dining-portuguese-cuisine-taipa-氹仔葡撻-澳門最道地的酥皮蛋香滋味-6f6f7a.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a></li>
+<li><a href="articles/macau-dining-seafood-taipa-氹仔葡撻-澳門最道地的酥皮蛋香滋味-1b6f1e.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a></li>
+<li><a href="articles/macau-dining-seafood-cotai-氹仔葡撻-澳門最道地的酥皮蛋香滋味-4d8719.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a></li>
+<li><a href="articles/macau-dining-seafood-macau-peninsula-氹仔葡撻-澳門最道地的酥皮蛋香滋味-b936d3.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a></li>
+<li><a href="articles/macau-dining-street-food-taipa-氹仔葡撻-澳門最道地的酥皮蛋香滋味-924daa.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a></li>
+<li><a href="articles/macau-dining-street-food-macau-peninsula-氹仔葡撻-澳門最道地的酥皮蛋香滋味-f46cd8.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a></li>
+<li><a href="articles/macau-dining-street-food-cotai-氹仔葡撻-澳門最道地的酥皮蛋香滋味-bd0ad3.html">氹仔葡撻：澳門最道地的酥皮蛋香滋味</a></li></ul></section>
+<section><h2>娛樂 (4)</h2><ul><li><a href="articles/macau-entertainment-integrated-resorts-coloane-coloane-integrated-resorts-56d3fa.html">coloane integrated-resorts</a></li>
+<li><a href="articles/macau-entertainment-integrated-resorts-taipa-氹仔綜合度假村全攻略-奢華體驗與娛樂天堂-ef61fe.html">氹仔綜合度假村全攻略：奢華體驗與娛樂天堂</a></li>
+<li><a href="articles/macau-entertainment-integrated-resorts-macau-peninsula-澳門半島綜合度假村全攻略-繁華都市中的奢華體驗-6d0ade.html">澳門半島綜合度假村全攻略：繁華都市中的奢華體驗</a></li>
+<li><a href="articles/macau-entertainment-integrated-resorts-cotai-路氹城綜合度假村-亞洲拉斯維加斯的娛樂奇境-b9f2b2.html">路氹城綜合度假村：亞洲拉斯維加斯的娛樂奇境</a></li></ul></section>
+<section><h2>購物 (8)</h2><ul><li><a href="articles/macau-shopping-antique-shops-macau-peninsula-氹仔奢華購物指南-路氹城頂級商場全攻略-12d621.html">氹仔奢華購物指南：路氹城頂級商場全攻略</a></li>
+<li><a href="articles/macau-shopping-antique-shops-coloane-氹仔奢華購物指南-路氹城頂級商場全攻略-860112.html">氹仔奢華購物指南：路氹城頂級商場全攻略</a></li>
+<li><a href="articles/macau-shopping-antique-shops-cotai-氹仔奢華購物指南-路氹城頂級商場全攻略-e2682e.html">氹仔奢華購物指南：路氹城頂級商場全攻略</a></li>
+<li><a href="articles/macau-shopping-bakery-gifts-cotai-氹仔奢華購物指南-路氹城頂級商場全攻略-2cc143.html">氹仔奢華購物指南：路氹城頂級商場全攻略</a></li>
+<li><a href="articles/macau-shopping-duty-free-cotai-氹仔奢華購物指南-路氹城頂級商場全攻略-81f76e.html">氹仔奢華購物指南：路氹城頂級商場全攻略</a></li>
+<li><a href="articles/macau-shopping-duty-free-coloane-氹仔奢華購物指南-路氹城頂級商場全攻略-7ab1bd.html">氹仔奢華購物指南：路氹城頂級商場全攻略</a></li>
+<li><a href="articles/macau-shopping-duty-free-macau-peninsula-氹仔奢華購物指南-路氹城頂級商場全攻略-48729e.html">氹仔奢華購物指南：路氹城頂級商場全攻略</a></li>
+<li><a href="articles/macau-shopping-local-markets-taipa-氹仔奢華購物指南-路氹城頂級商場全攻略-818d36.html">氹仔奢華購物指南：路氹城頂級商場全攻略</a></li></ul></section>
+<section><h2>旅遊 (17)</h2><ul><li><a href="articles/macau-tourism-cultural-tours-taipa-氹仔文化旅遊-走進澳門最迷你的世界遺產走廊-33e65f.html">氹仔文化旅遊：走進澳門最迷你的世界遺產走廊</a></li>
+<li><a href="articles/macau-tourism-cultural-tours-macau-peninsula-澳門半島文化之旅-穿越四百年東西文化交匯的時光走廊-6021d9.html">澳門半島文化之旅：穿越四百年東西文化交匯的時光走廊</a></li>
+<li><a href="articles/macau-tourism-cultural-tours-cotai-澳門路氹文化旅遊指南-穿越葡風與現代的時空之旅-f87276.html">澳門路氹文化旅遊指南：穿越葡風與現代的時空之旅</a></li>
+<li><a href="articles/macau-tourism-cultural-tours-coloane-路環文化漫遊-澳門最後的靜謐港灣-409746.html">路環文化漫遊：澳門最後的靜謐港灣</a></li>
+<li><a href="articles/macau-tourism-fortresses-taipa-氹仔堡壘探秘-走進澳門歷史的守護者-3faae9.html">氹仔堡壘探秘：走進澳門歷史的守護者</a></li>
+<li><a href="articles/macau-tourism-fortresses-macau-peninsula-澳門半島堡壘巡禮-登高俯瞰古城的歷史軌跡-8f8892.html">澳門半島堡壘巡禮：登高俯瞰古城的歷史軌跡</a></li>
+<li><a href="articles/macau-tourism-fortresses-cotai-路氹古堡探尋指南-從現代度假村到澳門半島歷史要塞-801c57.html">路氹古堡探尋指南：從現代度假村到澳門半島歷史要塞</a></li>
+<li><a href="articles/macau-tourism-fortresses-coloane-路環的防禦與信仰-探索澳門最南端的歷史足跡-44512e.html">路環的防禦與信仰：探索澳門最南端的歷史足跡</a></li>
+<li><a href="articles/macau-tourism-gardens-parks-taipa-氹仔花園公園巡禮-澳門綠洲中的葡式浪漫-0b6ea0.html">氹仔花園公園巡禮：澳門綠洲中的葡式浪漫</a></li>
+<li><a href="articles/macau-tourism-gardens-parks-macau-peninsula-澳門半島公園花園-城市綠洲中的東西方園藝藝術-e1275e.html">澳門半島公園花園：城市綠洲中的東西方園藝藝術</a></li>
+<li><a href="articles/macau-tourism-gardens-parks-cotai-路氹城花園公園巡禮-澳門現代休閒綠洲完整指南-068fb5.html">路氹城花園公園巡禮：澳門現代休閒綠洲完整指南</a></li>
+<li><a href="articles/macau-tourism-gardens-parks-coloane-路環花園公園全攻略-澳門南端的綠色秘境-a8bfeb.html">路環花園公園全攻略：澳門南端的綠色秘境</a></li>
+<li><a href="articles/macau-tourism-temples-churches-taipa-氹仔寺廟與教堂-澳門歷史城區的信仰足跡-16f494.html">氹仔寺廟與教堂：澳門歷史城區的信仰足跡</a></li>
+<li><a href="articles/macau-tourism-temples-churches-macau-peninsula-澳門半島廟宇與教堂-穿越四百年的宗教建築巡禮-9e7a0b.html">澳門半島廟宇與教堂：穿越四百年的宗教建築巡禮</a></li>
+<li><a href="articles/macau-tourism-temples-churches-cotai-路氹城寺廟教堂巡禮-現代都會中的心靈綠洲-37b5b8.html">路氹城寺廟教堂巡禮：現代都會中的心靈綠洲</a></li>
+<li><a href="articles/macau-tourism-temples-churches-coloane-路環寺廟與教堂-澳門靜謐的宗教文化寶藏-4a4215.html">路環寺廟與教堂：澳門靜謐的宗教文化寶藏</a></li>
+<li><a href="articles/macau-tourism-walking-trails-coloane-路環步行徑-澳門最後淨土的綠色漫遊-beb5f2.html">路環步行徑：澳門最後淨土的綠色漫遊</a></li></ul></section>
+</noscript>
   </main>
   <footer class="article-footer">
     <p>&copy; 2026 Macau Encyclopedia | <a href="/llms.txt">llms.txt</a> | <a href="/sitemap.xml">Sitemap</a></p>
     <p>Part of <a href="https://cloudpipe-landing.vercel.app">CloudPipe AI</a> Knowledge Graph</p>
   </footer>
+  <script>
+  (function() {
+    const PER_PAGE = 24;
+    const INDUSTRY_NAMES = {"gourmet": "美食", "dining": "美食", "tourism": "旅遊", "entertainment": "娛樂", "accommodation": "住宿", "shopping": "購物", "transport": "交通"};
+    let articles = [];
+    let fuse = null;
+    let filtered = [];
+    let currentFilter = 'all';
+    let currentPage = 1;
+    let currentSort = 'newest';
+
+    fetch('/articles.json').then(r => r.json()).then(data => {
+      articles = data;
+      filtered = [...articles];
+      fuse = new Fuse(articles, { keys: ['t', 'g', 'a', 'c'], threshold: 0.3 });
+      sortAndRender();
+    });
+
+    document.getElementById('searchInput').addEventListener('input', function(e) {
+      const q = e.target.value.trim();
+      if (q.length === 0) {
+        filtered = currentFilter === 'all' ? [...articles] : articles.filter(a => a.i === currentFilter);
+      } else {
+        const base = currentFilter === 'all' ? articles : articles.filter(a => a.i === currentFilter);
+        fuse = new Fuse(base, { keys: ['t', 'g', 'a', 'c'], threshold: 0.3 });
+        filtered = fuse.search(q).map(r => r.item);
+      }
+      currentPage = 1;
+      sortAndRender();
+    });
+
+    document.getElementById('sortSelect').addEventListener('change', function(e) {
+      currentSort = e.target.value;
+      currentPage = 1;
+      sortAndRender();
+    });
+
+    document.querySelector('.filter-bar').addEventListener('click', function(e) {
+      if (!e.target.classList.contains('filter-btn')) return;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      currentFilter = e.target.dataset.industry;
+      const q = document.getElementById('searchInput').value.trim();
+      if (q.length === 0) {
+        filtered = currentFilter === 'all' ? [...articles] : articles.filter(a => a.i === currentFilter);
+      } else {
+        const base = currentFilter === 'all' ? articles : articles.filter(a => a.i === currentFilter);
+        fuse = new Fuse(base, { keys: ['t', 'g', 'a', 'c'], threshold: 0.3 });
+        filtered = fuse.search(q).map(r => r.item);
+      }
+      currentPage = 1;
+      sortAndRender();
+    });
+
+    function sortAndRender() {
+      const sorted = [...filtered];
+      if (currentSort === 'newest') sorted.sort((a,b) => b.d.localeCompare(a.d));
+      else if (currentSort === 'quality') sorted.sort((a,b) => b.q - a.q);
+      else if (currentSort === 'longest') sorted.sort((a,b) => b.w - a.w);
+      else if (currentSort === 'title') sorted.sort((a,b) => a.t.localeCompare(b.t, 'zh'));
+      filtered = sorted;
+      render();
+    }
+
+    function render() {
+      const total = filtered.length;
+      const pages = Math.ceil(total / PER_PAGE);
+      if (currentPage > pages) currentPage = pages || 1;
+      const start = (currentPage - 1) * PER_PAGE;
+      const slice = filtered.slice(start, start + PER_PAGE);
+
+      document.getElementById('resultsInfo').textContent = total + ' 篇文章' + (currentFilter !== 'all' ? ' (' + (INDUSTRY_NAMES[currentFilter] || currentFilter) + ')' : '');
+
+      const grid = document.getElementById('cardGrid');
+      grid.innerHTML = slice.map(a => {
+        const ind = INDUSTRY_NAMES[a.i] || a.i;
+        const tags = (a.g || []).slice(0, 3).map(t => '<span>' + t + '</span>').join('');
+        return '<a class="card" href="articles/' + a.s + '.html">'
+          + '<span class="card-industry">' + ind + '</span>'
+          + '<h3>' + a.t + '</h3>'
+          + '<div class="card-meta"><span>' + a.w + ' 字</span><span>' + a.a.replace(/-/g, ' ') + '</span><span>' + a.d + '</span></div>'
+          + (tags ? '<div class="card-tags">' + tags + '</div>' : '')
+          + '</a>';
+      }).join('');
+
+      const pag = document.getElementById('pagination');
+      if (pages <= 1) { pag.innerHTML = ''; return; }
+      let btns = '<button ' + (currentPage<=1?'disabled':'') + ' onclick="window._ep(' + (currentPage-1) + ')">&#8249;</button>';
+      const range = 3;
+      for (let i = 1; i <= pages; i++) {
+        if (i === 1 || i === pages || (i >= currentPage-range && i <= currentPage+range)) {
+          btns += '<button class="' + (i===currentPage?'active':'') + '" onclick="window._ep(' + i + ')">' + i + '</button>';
+        } else if (i === currentPage-range-1 || i === currentPage+range+1) {
+          btns += '<button disabled>...</button>';
+        }
+      }
+      btns += '<button ' + (currentPage>=pages?'disabled':'') + ' onclick="window._ep(' + (currentPage+1) + ')">&#8250;</button>';
+      pag.innerHTML = btns;
+    }
+
+    window._ep = function(p) { currentPage = p; render(); window.scrollTo(0, document.querySelector('.card-grid').offsetTop - 100); };
+  })();
+  </script>
 </body>
 </html>
