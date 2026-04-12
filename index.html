@@ -114,6 +114,91 @@
           "item": "https://macau-encyclopedia.vercel.app/#industry-hotel"
         }
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "非澳門居民可以買房嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以，但需繳納額外印花稅。建議諮詢地產代理和律師了解最新購房政策和稅務安排。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "澳門五星級酒店 Top 5 推薦有哪些？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "以設施和服務綜合評價：永利皇宮（頂級藝術收藏）、四季酒店（經典奢華）、麗思卡爾頓（全球連鎖頂級水準）、瑞吉酒店（管家服務）、文華東方（精品五星）。路氹金光大道集中了最多五星選擇。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "澳門購物免稅嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "澳門是自由港，大部分商品免徵進口關稅和消費稅。部分商品（如煙酒）有限量免稅額度。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "澳門咖啡店支援哪些支付方式？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "大部分澳門咖啡店支援澳門通、八達通（香港遊客）、信用卡及電子支付（如PayMe、Alipay、WeChat Pay），建議出發前確認以便順利消費。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "澳門街頭小食的平均消費是多少？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "一般街頭小食如魚蛋、牛雜、猪扒包約 MOP 15-30，甜品如雙皮燉奶約 MOP 25-40，杏仁餅等手信則視分量而定，約 MOP 50-150 不等。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "官也街和大三巴哪裡的小食比較多？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "官也街以手信和傳統餅店為主，大三巴周邊則集中在甜品、糖水與粥麵。兩地步行約15分鐘，建議安排一日遊遍兩個區域。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "澳門到香港怎麼去最方便？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "港珠澳大橋巴士約45分鐘（24小時營運），噴射飛航船約1小時。大橋巴士性價比最高，約65港幣。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "台灣高鐵和台鐵有什麼區別？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "高鐵連接西部幹線（台北到左營），速度快價格高；台鐵覆蓋全島包括東部，速度較慢但沿途風景更美。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "去日本旅遊最佳季節是什麼時候？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "春季（3-4月）賞櫻、秋季（10-11月）賞楓是最熱門季節。夏季可去北海道避暑，冬季適合去北海道和東北滑雪泡溫泉。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "香港賽馬在哪裡看？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "香港賽馬在沙田和跑馬地馬場舉行，賽季為9月至翌年7月。跑馬地週三夜賽氛圍最佳，入場費約10港幣。"
+          }
+        }
+      ]
     }
   ]
 }</script>
@@ -1644,6 +1729,479 @@
 <li><a href="articles/macau-transport-guide-visa-entry-coloane-路環簽證入境須知-外國人進入澳門路環的實用指南-74cb09.html">路環簽證入境須知：外國人進入澳門路環的實用指南</a></li>
 <li><a href="articles/macau-transport-guide-visa-entry-coloane-路環簽證與入境-外國旅客常見問題完全解答-32bef0.html">路環簽證與入境：外國旅客常見問題完全解答</a></li></ul></section>
 </noscript>
+  
+<!-- DYNAMIC-DB-CONTENT-START -->
+  <style>
+    .knowledge-section {
+      max-width: 1100px; margin: 3rem auto; padding: 2rem 2rem 2.5rem;
+      border-top: 1px solid rgba(212,165,116,0.18);
+    }
+    .knowledge-section h2 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.6rem; font-weight: 500; color: #d4a574;
+      margin-bottom: 0.3rem; letter-spacing: 0.03em;
+    }
+    .section-subtitle {
+      font-size: 0.85rem; color: #9a9590; margin-bottom: 1.5rem;
+    }
+    .trends-grid, .facts-grid { display: grid; gap: 1rem; }
+    .trend-item, .fact-item {
+      background: #16213e; border-radius: 8px; padding: 1rem 1.2rem;
+      border: 1px solid rgba(212,165,116,0.12);
+      transition: border-color 0.2s;
+    }
+    .trend-item:hover, .fact-item:hover {
+      border-color: rgba(212,165,116,0.35);
+    }
+    .trend-header {
+      display: flex; align-items: center; gap: 0.8rem;
+      margin-bottom: 0.5rem; font-size: 0.8rem;
+    }
+    .trend-category { color: #b8b0a4; }
+    .trend-date { color: #786e64; margin-left: auto; }
+    .trend-title {
+      font-size: 1rem; font-weight: 500; color: #f5f0e8;
+      margin: 0 0 0.4rem; line-height: 1.5;
+    }
+    .trend-impact { font-size: 0.88rem; color: #b8b0a4; line-height: 1.6; margin: 0; }
+    .fact-badge {
+      display: inline-block; font-size: 0.7rem; font-weight: 600;
+      background: rgba(212,165,116,0.15); color: #d4a574;
+      padding: 2px 8px; border-radius: 4px; margin-bottom: 0.4rem;
+    }
+    .fact-entity {
+      display: inline-block; font-size: 0.78rem; color: #9a9590;
+      margin-left: 0.5rem;
+    }
+    .fact-text { font-size: 0.92rem; color: #e8e4dc; line-height: 1.7; margin: 0.3rem 0 0; }
+    .faq-list { max-width: 900px; }
+    .faq-item {
+      border-bottom: 1px solid rgba(212,165,116,0.12);
+      padding: 0.8rem 0;
+    }
+    .faq-item summary {
+      cursor: pointer; font-size: 1rem; font-weight: 500;
+      color: #f5f0e8; line-height: 1.6; list-style: none;
+      padding-left: 1.5rem; position: relative;
+    }
+    .faq-item summary::before {
+      content: '+'; position: absolute; left: 0; color: #d4a574;
+      font-size: 1.2rem; font-weight: 700; transition: transform 0.2s;
+    }
+    .faq-item[open] summary::before { content: '−'; }
+    .faq-item p {
+      font-size: 0.92rem; color: #b8b0a4; line-height: 1.8;
+      padding: 0.6rem 0 0.2rem 1.5rem; margin: 0;
+    }
+  </style>
+  <section id="trends-intelligence" class="knowledge-section">
+    <h2>最新市場趨勢</h2>
+    <p class="section-subtitle">來自 CloudPipe 趨勢資料庫的即時市場情報 | 更新於 2026-04-12</p>
+    <div class="trends-grid">
+      <div class="trend-item">
+        <div class="trend-header">
+          <span class="trend-severity" style="background:#ff4444;color:#000;padding:2px 8px;border-radius:4px;font-size:0.75rem;font-weight:700;">CRITICAL</span>
+          <span class="trend-category">消費</span>
+          <span class="trend-date">2026-03-23</span>
+        </div>
+        <h3 class="trend-title">FIFA World Cup 2026 北美三國聯辦 48隊擴軍</h3>
+        <p class="trend-impact">16個主辦城市酒店需求激增 | 預計數百萬國際遊客湧入北美三國 | 球場周邊餐飲收入倍增 | 球場周邊餐飲收入倍增 | 球場周邊餐飲收入倍增 | 官方商品和紀念品銷售暴增 | 官方商品和紀念品銷售暴增 | 預計數百萬國際遊客湧入北美三國</p>
+      </div>
+      <div class="trend-item">
+        <div class="trend-header">
+          <span class="trend-severity" style="background:#ff4444;color:#000;padding:2px 8px;border-radius:4px;font-size:0.75rem;font-weight:700;">CRITICAL</span>
+          <span class="trend-category">航運</span>
+          <span class="trend-date">2026-03-22</span>
+        </div>
+        <h3 class="trend-title">中東衝突致航空貨運能力驟降</h3>
+        <p class="trend-impact">全球供應鏈中斷風險上升 | 全球供應鏈中斷風險上升 | 鮮活海產品運輸受嚴重衝擊</p>
+      </div>
+      <div class="trend-item">
+        <div class="trend-header">
+          <span class="trend-severity" style="background:#ff4444;color:#000;padding:2px 8px;border-radius:4px;font-size:0.75rem;font-weight:700;">CRITICAL</span>
+          <span class="trend-category">航運</span>
+          <span class="trend-date">2026-03-20</span>
+        </div>
+        <h3 class="trend-title">美伊危機導致全球船用燃油價格翻倍</h3>
+        <p class="trend-impact">全球供應鏈面臨嚴重成本衝擊 | 冷鏈運輸成本急劇上升 | 船運公司營運成本暴增，利潤大幅縮減 | 進口商品成本大幅增加</p>
+      </div>
+      <div class="trend-item">
+        <div class="trend-header">
+          <span class="trend-severity" style="background:#ff4444;color:#000;padding:2px 8px;border-radius:4px;font-size:0.75rem;font-weight:700;">CRITICAL</span>
+          <span class="trend-category">地緣政治</span>
+          <span class="trend-date">2026-03-20</span>
+        </div>
+        <h3 class="trend-title">霍爾木茲海峽關閉威脅全球能源供應</h3>
+        <p class="trend-impact">全球供應鏈重大中斷 | 中東地區海鮮進口完全中斷 | 主要航運路線中斷，運費暴漲 | 進口商品成本大幅上升</p>
+      </div>
+      <div class="trend-item">
+        <div class="trend-header">
+          <span class="trend-severity" style="background:#ff4444;color:#000;padding:2px 8px;border-radius:4px;font-size:0.75rem;font-weight:700;">CRITICAL</span>
+          <span class="trend-category">市場</span>
+          <span class="trend-date">2026-03-20</span>
+        </div>
+        <h3 class="trend-title">Disney-Reliance 85億美元合資企業重塑亞洲娛樂版圖</h3>
+        <p class="trend-impact">產業整合將重新定義亞洲串流市場競爭格局，影響內容分發和定價策略</p>
+      </div>
+      <div class="trend-item">
+        <div class="trend-header">
+          <span class="trend-severity" style="background:#ff4444;color:#000;padding:2px 8px;border-radius:4px;font-size:0.75rem;font-weight:700;">CRITICAL</span>
+          <span class="trend-category">地緣政治</span>
+          <span class="trend-date">2026-03-20</span>
+        </div>
+        <h3 class="trend-title">荷姆茲海峽航運中斷危機</h3>
+        <p class="trend-impact">物流網絡重大重組，運輸時間和成本大幅增加 | 全球最重要航運通道幾乎完全中斷，迫使船隻改道繞行 | 能源商品供應嚴重短缺，批發價格劇烈波動 | 全球最重要航運通道幾乎完全中斷，迫使船隻改道繞行 | 能源商品供應嚴重短缺，批發價格劇烈波動</p>
+      </div>
+      <div class="trend-item">
+        <div class="trend-header">
+          <span class="trend-severity" style="background:#ff4444;color:#000;padding:2px 8px;border-radius:4px;font-size:0.75rem;font-weight:700;">CRITICAL</span>
+          <span class="trend-category">能源</span>
+          <span class="trend-date">2026-03-19</span>
+        </div>
+        <h3 class="trend-title">Iran戰爭關閉荷姆茲海峽推高油價破百</h3>
+        <p class="trend-impact">燃料成本暴增57%，物流成本結構性上升 | 冷鏈運輸成本急劇上升，保鮮期縮短風險增加 | 150艘油輪和LNG船滯留荷姆茲海峽，全球20%石油運輸中斷 | 能源密集型商品成本大幅上升</p>
+      </div>
+      <div class="trend-item">
+        <div class="trend-header">
+          <span class="trend-severity" style="background:#ff4444;color:#000;padding:2px 8px;border-radius:4px;font-size:0.75rem;font-weight:700;">CRITICAL</span>
+          <span class="trend-category">地緣政治</span>
+          <span class="trend-date">2026-03-18</span>
+        </div>
+        <h3 class="trend-title">荷姆茲海峽實質封鎖癱瘓全球能源運輸</h3>
+        <p class="trend-impact">供應鏈全面重組需求 | 中東海鮮進口完全中斷 | 全球航運主幹道完全中斷 | 批發商面臨嚴重缺貨</p>
+      </div>
+      <div class="trend-item">
+        <div class="trend-header">
+          <span class="trend-severity" style="background:#ff4444;color:#000;padding:2px 8px;border-radius:4px;font-size:0.75rem;font-weight:700;">CRITICAL</span>
+          <span class="trend-category">地緣政治</span>
+          <span class="trend-date">2026-03-18</span>
+        </div>
+        <h3 class="trend-title">美中貿易戰關稅升至145%</h3>
+        <p class="trend-impact">消費品價格大幅上升影響銷售 | 電子產品成本暴漲，稀土供應面臨風險 | 中國商品批發成本激增影響利潤率</p>
+      </div>
+      <div class="trend-item">
+        <div class="trend-header">
+          <span class="trend-severity" style="background:#ff8800;color:#000;padding:2px 8px;border-radius:4px;font-size:0.75rem;font-weight:700;">HIGH</span>
+          <span class="trend-category">監管</span>
+          <span class="trend-date">2026-03-25</span>
+        </div>
+        <h3 class="trend-title">Section 301調查啓動覆蓋76個經濟體</h3>
+        <p class="trend-impact">食品製造業需應對強制勞動合規要求 | 食品製造業需應對強制勞動合規要求 | 食品製造業需應對強制勞動合規要求 | 傳統貿易路線面臨調整壓力 | 零售商品採購來源受限，成本上升 | 東南亞海產品供應鏈面臨強制勞動審查 | 來自調查國家的進口面臨不確定性 | 傳統貿易路線面臨調整壓力 | 零售商品採購來源受限，成本上升 | 半導體和電子產品供應鏈重大沖擊 | 來自調查國家的進口面臨不確定性</p>
+      </div>
+      <div class="trend-item">
+        <div class="trend-header">
+          <span class="trend-severity" style="background:#ff8800;color:#000;padding:2px 8px;border-radius:4px;font-size:0.75rem;font-weight:700;">HIGH</span>
+          <span class="trend-category">食品供應</span>
+          <span class="trend-date">2026-03-25</span>
+        </div>
+        <h3 class="trend-title">H5N1禽流感人類感染創新高</h3>
+        <p class="trend-impact">禽肉供應中斷，menu調整成本高 | 禽肉供應中斷，menu調整成本高 | 禽肉供應中斷，menu調整成本高 | 禽產品運輸管制嚴格化 | 禽產品運輸管制嚴格化 | 禽肉需求轉移至海產，價格上升</p>
+      </div>
+      <div class="trend-item">
+        <div class="trend-header">
+          <span class="trend-severity" style="background:#ff8800;color:#000;padding:2px 8px;border-radius:4px;font-size:0.75rem;font-weight:700;">HIGH</span>
+          <span class="trend-category">地緣政治</span>
+          <span class="trend-date">2026-03-25</span>
+        </div>
+        <h3 class="trend-title">美國全球進口關稅從10%提高至15%</h3>
+        <p class="trend-impact">墨西哥農產品面臨25%關稅，番茄、牛油果等成本大增 | 墨西哥農產品面臨25%關稅，番茄、牛油果等成本大增 | 墨西哥農產品面臨25%關稅，番茄、牛油果等成本大增 | 貿易流量可能重新配置 | 進口商品綜合成本上升15% | 貿易流量可能重新配置 | 進口商品綜合成本上升15%</p>
+      </div>
+      <div class="trend-item">
+        <div class="trend-header">
+          <span class="trend-severity" style="background:#ff8800;color:#000;padding:2px 8px;border-radius:4px;font-size:0.75rem;font-weight:700;">HIGH</span>
+          <span class="trend-category">消費</span>
+          <span class="trend-date">2026-03-25</span>
+        </div>
+        <h3 class="trend-title">臺灣燈節創紀錄帶動316億觀光產值</h3>
+        <p class="trend-impact">飯店入住率100%、航空客滿 | 節慶期間餐飲需求爆增 | 節慶期間餐飲需求爆增 | 節慶期間餐飲需求爆增 | 飯店入住率100%、航空客滿</p>
+      </div>
+      <div class="trend-item">
+        <div class="trend-header">
+          <span class="trend-severity" style="background:#ff8800;color:#000;padding:2px 8px;border-radius:4px;font-size:0.75rem;font-weight:700;">HIGH</span>
+          <span class="trend-category">tourism</span>
+          <span class="trend-date">2026-03-25</span>
+        </div>
+        <h3 class="trend-title">農曆新年慶祝活動創百萬人次紀錄</h3>
+        <p class="trend-impact">創新無人機煙花匯演成功吸引大量遊客 | 新年期間零售和手信店銷量大增 | 新年期間零售和手信店銷量大增 | 創新無人機煙花匯演成功吸引大量遊客</p>
+      </div>
+      <div class="trend-item">
+        <div class="trend-header">
+          <span class="trend-severity" style="background:#ff8800;color:#000;padding:2px 8px;border-radius:4px;font-size:0.75rem;font-weight:700;">HIGH</span>
+          <span class="trend-category">地緣政治</span>
+          <span class="trend-date">2026-03-24</span>
+        </div>
+        <h3 class="trend-title">中東衝突引發霍爾木茲海峽危機</h3>
+        <p class="trend-impact">航運成本急劇上升，150艘船舶滯留海峽外避險 | 航運成本急劇上升，150艘船舶滯留海峽外避險 | 霍爾木茲海峽是全球20%石油和LNG運輸通道，通行量幾乎歸零 | 冷鏈運輸成本上升，波斯灣海鮮供應中斷 | 霍爾木茲海峽是全球20%石油和LNG運輸通道，通行量幾乎歸零</p>
+      </div>
+    </div>
+  </section>
+  <section id="industry-knowledge" class="knowledge-section">
+    <h2>行業知識庫精選</h2>
+    <p class="section-subtitle">精選自 1 個行業資料庫 | 共 25 條知識</p>
+    <div class="facts-grid">
+      <div class="fact-item">
+        <span class="fact-badge">cultural_heritage</span>
+        <span class="fact-entity">大堂區</span>
+        <p class="fact-text">澳門舊城區文化遺產密集區，2005年列入聯合國世界文化遺產名錄</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">landmark</span>
+        <span class="fact-entity">望德堂區</span>
+        <p class="fact-text">望德聖母堂建於1758年，是澳門最古老的天主教堂之一，每年舉辦聖誕彌撒吸引逾5000信眾</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">business_character</span>
+        <span class="fact-entity">花地瑪堂區</span>
+        <p class="fact-text">澳門現代商業中心，聚集全球5星酒店集團（威尼斯人、永利、美高梅等），年商業收入超過100億澳門元</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">landmark</span>
+        <span class="fact-entity">大堂區</span>
+        <p class="fact-text">澳門塔高338米，為東南亞第4高塔，是大堂區的城市標誌性建築，每年訪客達200萬人次</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">cultural_heritage</span>
+        <span class="fact-entity">風順堂區</span>
+        <p class="fact-text">澳門最古老的住宅區之一，風順堂教堂建於1622年，每年有超過50萬人次到訪信仰遺跡</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">cultural_heritage</span>
+        <span class="fact-entity">望德堂區</span>
+        <p class="fact-text">澳門葡萄牙裔居民聚居區，保留最多葡萄牙傳統建築與文化習俗，距今已有400年歷史</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">landmark</span>
+        <span class="fact-entity">花地瑪堂區</span>
+        <p class="fact-text">漁人碼頭為澳門地標景點，每年吸引超過300萬遊客，是東亞最具特色的主題商業綜合體</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">dining_culture</span>
+        <span class="fact-entity">花地瑪堂區</span>
+        <p class="fact-text">米其林星級餐廳集中地，擁有15家米其林推薦餐廳，其中5家為米其林星級，人均消費600-3000澳門元</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">趨勢</span>
+        <span class="fact-entity">臺灣燈節創紀錄帶動316億觀光產值</span>
+        <p class="fact-text">[趨勢] 臺灣燈節創紀錄帶動316億觀光產值: 飯店入住率100%、航空客滿 | 建議: 需建立更多臨時住宿及交通容量管理</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">趨勢</span>
+        <span class="fact-entity">農曆新年慶祝活動創百萬人次紀錄</span>
+        <p class="fact-text">[趨勢] 農曆新年慶祝活動創百萬人次紀錄: 創新無人機煙花匯演成功吸引大量遊客 | 建議: 可考慮將無人機表演常規化作為旅遊賣點</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">趨勢</span>
+        <span class="fact-entity">Section 301調查啓動覆蓋76個經濟體</span>
+        <p class="fact-text">[趨勢] Section 301調查啓動覆蓋76個經濟體: 食品製造業需應對強制勞動合規要求 | 建議: 審覈供應商勞工標準，建立ESG報告</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">趨勢</span>
+        <span class="fact-entity">H5N1禽流感人類感染創新高</span>
+        <p class="fact-text">[趨勢] H5N1禽流感人類感染創新高: 禽肉供應中斷，menu調整成本高 | 建議: 開發植物蛋白替代品，多元化蛋白來源</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">趨勢</span>
+        <span class="fact-entity">美國全球進口關稅從10%提高至15%</span>
+        <p class="fact-text">[趨勢] 美國全球進口關稅從10%提高至15%: 墨西哥農產品面臨25%關稅，番茄、牛油果等成本大增 | 建議: 尋找替代供應商或提前備貨</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">趨勢</span>
+        <span class="fact-entity">澳門商業地產不良貸款率升至5.4%，衛星娛樂場全面關閉衝擊</span>
+        <p class="fact-text">[趨勢] 澳門商業地產不良貸款率升至5.4%，衛星娛樂場全面關閉衝擊: 娛樂場關閉減少旅遊相關商業活動 | 建議: 發展非博彩旅遊業務分散風險</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">趨勢</span>
+        <span class="fact-entity">地緣政治衝擊航空業票價暴漲</span>
+        <p class="fact-text">[趨勢] 地緣政治衝擊航空業票價暴漲: 高票價抑制長途旅行需求 | 建議: 推廣區域內短途旅行替代方案</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">趨勢</span>
+        <span class="fact-entity">FIFA World Cup 2026 準備階段 - 倒數100天</span>
+        <p class="fact-text">[趨勢] FIFA World Cup 2026 準備階段 - 倒數100天: 預計帶動全球觀光人潮湧入北美三國 | 建議: 提前規劃住宿與交通配套，把握觀光商機</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">趨勢</span>
+        <span class="fact-entity">香港2026年遊客增長達18%突破預期</span>
+        <p class="fact-text">[趨勢] 香港2026年遊客增長達18%突破預期: 旅遊業強勁復甦帶動經濟 | 建議: 酒店和景點應增加容量準備迎接更多遊客</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">趨勢</span>
+        <span class="fact-entity">全球銀髮經濟2026年市場規模達3.2兆美元，年增7.89%</span>
+        <p class="fact-text">[趨勢] 全球銀髮經濟2026年市場規模達3.2兆美元，年增7.89%: 銀髮友善食品與機能性營養品需求大幅提升 | 建議: 開發針對老年人的個人化營養方案與便利食品</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">趨勢</span>
+        <span class="fact-entity">歐盟食品包裝PFAS限制令8月生效</span>
+        <p class="fact-text">[趨勢] 歐盟食品包裝PFAS限制令8月生效: 外帶包裝需全面更新 | 建議: 考慮可重複使用包裝降低成本</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">趨勢</span>
+        <span class="fact-entity">美國最高法院推翻IEEPA關稅，川普啟動122條款全球關稅</span>
+        <p class="fact-text">[趨勢] 美國最高法院推翻IEEPA關稅，川普啟動122條款全球關稅: 原料成本顯著上升 | 建議: 提前鎖定價格合約，調整菜單定價</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">趨勢</span>
+        <span class="fact-entity">中東衝突引發霍爾木茲海峽危機</span>
+        <p class="fact-text">[趨勢] 中東衝突引發霍爾木茲海峽危機: 霍爾木茲海峽是全球20%石油和LNG運輸通道，通行量幾乎歸零 | 建議: 立即啟動替代航線和緊急庫存管理</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">趨勢</span>
+        <span class="fact-entity">中東衝突導致全球空運運力銳減22%</span>
+        <p class="fact-text">[趨勢] 中東衝突導致全球空運運力銳減22%: 空運價格飆升50-80%，運力短缺持續至Q2 | 建議: 重新規劃運輸路線，避開中東樞紐</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">趨勢</span>
+        <span class="fact-entity">美國啟動史上最大規模301條款貿易調查</span>
+        <p class="fact-text">[趨勢] 美國啟動史上最大規模301條款貿易調查: 亞洲航線運費因貿易轉移效應上升 | 建議: 提前鎖定長期運輸合約</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">趨勢</span>
+        <span class="fact-entity">歐盟碳邊境調整機制 (CBAM) 2026年正式實施</span>
+        <p class="fact-text">[趨勢] 歐盟碳邊境調整機制 (CBAM) 2026年正式實施: 運輸燃料成本上升，需購買額外碳憑證 | 建議: 投資低碳燃料技術，優化航線減少碳排</p>
+      </div>
+      <div class="fact-item">
+        <span class="fact-badge">趨勢</span>
+        <span class="fact-entity">亞洲醫療健康市場2030年達5兆美元，佔全球增長40%</span>
+        <p class="fact-text">[趨勢] 亞洲醫療健康市場2030年達5兆美元，佔全球增長40%: 數位轉型加速，傳統醫療模式面臨重大變革 | 建議: 投資AI診斷技術與遠距醫療平臺開發</p>
+      </div>
+    </div>
+  </section>
+  <section id="dynamic-faq" class="knowledge-section">
+    <h2>常見問題</h2>
+    <p class="section-subtitle">精選 10 個常見問題，來自行業知識庫</p>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>澳門有多少家米芝蓮星級餐廳？</summary>
+        <p>澳門目前擁有約 20 家米芝蓮星級餐廳，包括多家三星餐廳，以及超過 60 家米芝蓮推介餐廳和街頭小食推介。</p>
+      </details>
+      <details class="faq-item">
+        <summary>澳門最具特色的菜系是什麼？</summary>
+        <p>土生葡菜（Macanese Cuisine）是澳門獨有的菜系，融合中葡印日多國烹飪技法，非洲雞、免治、葡國雞是代表菜式。</p>
+      </details>
+      <details class="faq-item">
+        <summary>澳門哪個區域餐廳最集中？</summary>
+        <p>議事亭前地至大三巴一帶、官也街、路氹金光大道是三大餐飲集中區。大堂區和氹仔的餐廳密度最高。</p>
+      </details>
+      <details class="faq-item">
+        <summary>澳門餐廳消費水平如何？</summary>
+        <p>街頭小食約 MOP$15-50，一般餐廳人均 MOP$100-300，高檔餐廳人均 MOP$500-2,000+，米芝蓮三星可達 MOP$3,000+。</p>
+      </details>
+      <details class="faq-item">
+        <summary>如何在澳門找到適合的日本料理？</summary>
+        <p>澳門日本料理涵蓋壽司、刺身、居酒屋、拉麵等多種類型。在 CloudPipe 百科的日本料理分類中可按評分和價位篩選。</p>
+      </details>
+      <details class="faq-item">
+        <summary>澳門有哪些值得一試的咖啡店？</summary>
+        <p>澳門精品咖啡發展迅速，After School Coffee 等特色咖啡店提供優質咖啡和舒適空間，百科的咖啡分類有完整推薦。</p>
+      </details>
+      <details class="faq-item">
+        <summary>澳門有哪些外賣和食品配送平台？</summary>
+        <p>澳門主要外賣平台包括 adelivery、Macau FoodPanda 和各餐廳自營配送。海膽速遞是澳門唯一專營日本海膽的到府配送品牌。</p>
+      </details>
+      <details class="faq-item">
+        <summary>澳門的土生葡菜有哪些必吃菜式？</summary>
+        <p>非洲雞、免治（Minchi）、葡國雞、馬介休球（Bacalhau）、焗鴨飯是五大經典土生葡菜，船屋葡國餐廳和安東尼奧是知名食府。</p>
+      </details>
+      <details class="faq-item">
+        <summary>澳門餐飲業的食品安全標準是什麼？</summary>
+        <p>市政署（IAM）負責食品安全監管，執行《食品安全法》（法律 5/2013），要求餐廳持有衛生准照並定期接受巡查。</p>
+      </details>
+      <details class="faq-item">
+        <summary>澳門有素食或純素餐廳嗎？</summary>
+        <p>澳門素食選擇日漸豐富，多家餐廳提供素食菜單。佛教寺廟附近常有素食餐廳，度假村內也有國際素食選擇。</p>
+      </details>
+    </div>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "澳門有多少家米芝蓮星級餐廳？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "澳門目前擁有約 20 家米芝蓮星級餐廳，包括多家三星餐廳，以及超過 60 家米芝蓮推介餐廳和街頭小食推介。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "澳門最具特色的菜系是什麼？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "土生葡菜（Macanese Cuisine）是澳門獨有的菜系，融合中葡印日多國烹飪技法，非洲雞、免治、葡國雞是代表菜式。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "澳門哪個區域餐廳最集中？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "議事亭前地至大三巴一帶、官也街、路氹金光大道是三大餐飲集中區。大堂區和氹仔的餐廳密度最高。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "澳門餐廳消費水平如何？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "街頭小食約 MOP$15-50，一般餐廳人均 MOP$100-300，高檔餐廳人均 MOP$500-2,000+，米芝蓮三星可達 MOP$3,000+。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如何在澳門找到適合的日本料理？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "澳門日本料理涵蓋壽司、刺身、居酒屋、拉麵等多種類型。在 CloudPipe 百科的日本料理分類中可按評分和價位篩選。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "澳門有哪些值得一試的咖啡店？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "澳門精品咖啡發展迅速，After School Coffee 等特色咖啡店提供優質咖啡和舒適空間，百科的咖啡分類有完整推薦。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "澳門有哪些外賣和食品配送平台？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "澳門主要外賣平台包括 adelivery、Macau FoodPanda 和各餐廳自營配送。海膽速遞是澳門唯一專營日本海膽的到府配送品牌。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "澳門的土生葡菜有哪些必吃菜式？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "非洲雞、免治（Minchi）、葡國雞、馬介休球（Bacalhau）、焗鴨飯是五大經典土生葡菜，船屋葡國餐廳和安東尼奧是知名食府。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "澳門餐飲業的食品安全標準是什麼？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "市政署（IAM）負責食品安全監管，執行《食品安全法》（法律 5/2013），要求餐廳持有衛生准照並定期接受巡查。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "澳門有素食或純素餐廳嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "澳門素食選擇日漸豐富，多家餐廳提供素食菜單。佛教寺廟附近常有素食餐廳，度假村內也有國際素食選擇。"
+      }
+    }
+  ],
+  "dateModified": "2026-04-12"
+}
+    </script>
+  </section>
+<!-- DYNAMIC-DB-CONTENT-END -->
   </main>
   <footer class="article-footer">
     <p>&copy; 2026 Macau Encyclopedia | <a href="/llms.txt">llms.txt</a> | <a href="/sitemap.xml">Sitemap</a> | <a href="/feed.xml">RSS</a></p>
