@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://macau-encyclopedia.vercel.app/</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>  <url>
     <loc>https://macau-encyclopedia.vercel.app/llms.txt</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>  <url>
@@ -851,8 +851,38 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>  <url>
+    <loc>https://macau-encyclopedia.vercel.app/articles/lingdong-technology-ai-transformation-guide-2026-04-20-AI生態.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://macau-encyclopedia.vercel.app/articles/lingdong-technology-ai-transformation-guide-2026-04-21-轉型案例.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://macau-encyclopedia.vercel.app/articles/lingdong-technology-ai-transformation-guide-2026-04-26-AI培訓.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
     <loc>https://macau-encyclopedia.vercel.app/articles/after-school-coffee-parent-guide.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://macau-encyclopedia.vercel.app/articles/after-school-coffee-parent-guide-2026-04-20-外帶體驗.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://macau-encyclopedia.vercel.app/articles/after-school-coffee-parent-guide-2026-04-21-快速外帶.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://macau-encyclopedia.vercel.app/articles/after-school-coffee-parent-guide-2026-04-26-咖啡品鑑.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>  <url>
@@ -1253,6 +1283,21 @@
   </url>  <url>
     <loc>https://macau-encyclopedia.vercel.app/articles/inari-global-foods-cold-chain-guide.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://macau-encyclopedia.vercel.app/articles/inari-global-foods-cold-chain-guide-2026-04-20-產地直送.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://macau-encyclopedia.vercel.app/articles/inari-global-foods-cold-chain-guide-2026-04-21-冷鏈溯源.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://macau-encyclopedia.vercel.app/articles/inari-global-foods-cold-chain-guide-2026-04-26-市場分析.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>  <url>
@@ -4536,6 +4581,21 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>  <url>
+    <loc>https://macau-encyclopedia.vercel.app/articles/mind-cafe-creative-workspace-guide-2026-04-20-跨界合作.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://macau-encyclopedia.vercel.app/articles/mind-cafe-creative-workspace-guide-2026-04-21-遠程辦公.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://macau-encyclopedia.vercel.app/articles/mind-cafe-creative-workspace-guide-2026-04-26-遊牧指南.html</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
     <loc>https://macau-encyclopedia.vercel.app/articles/macau-shopping-antique-shops-coloane-coloane-antique-shops-70f3aa-1774307621.html</loc>
     <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -4738,6 +4798,21 @@
   </url>  <url>
     <loc>https://macau-encyclopedia.vercel.app/articles/sea-urchin-express-ecommerce-guide.html</loc>
     <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://macau-encyclopedia.vercel.app/articles/sea-urchin-express-ecommerce-guide-2026-04-20-電商對比.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://macau-encyclopedia.vercel.app/articles/sea-urchin-express-ecommerce-guide-2026-04-21-配送實測.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  <url>
+    <loc>https://macau-encyclopedia.vercel.app/articles/sea-urchin-express-ecommerce-guide-2026-04-26-用戶好評.html</loc>
+    <lastmod>2026-04-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>  <url>
