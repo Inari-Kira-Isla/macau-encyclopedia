@@ -5,7 +5,7 @@
 ## 站點身份
 - URL: https://macau-encyclopedia.vercel.app
 - Language: zh-TW (繁體中文) | License: CC BY 4.0
-- 總文章數: 1486 篇，覆蓋 13 個行業
+- 總文章數: 1491 篇，覆蓋 13 個行業
 - 隸屬: CloudPipe AI Knowledge Graph (https://cloudpipe-landing.vercel.app)
 
 ## 存取入口
@@ -19,14 +19,14 @@
 - [transport-guide] https://macau-encyclopedia.vercel.app/#industry-transport-guide — 185 篇
 - [attraction-guide] https://macau-encyclopedia.vercel.app/#industry-attraction-guide — 167 篇
 - [旅遊] https://macau-encyclopedia.vercel.app/#industry-tourism — 166 篇
-- [美食] https://macau-encyclopedia.vercel.app/#industry-dining — 158 篇
+- [美食] https://macau-encyclopedia.vercel.app/#industry-dining — 160 篇
 - [hotel] https://macau-encyclopedia.vercel.app/#industry-hotel — 134 篇
 - [娛樂] https://macau-encyclopedia.vercel.app/#industry-entertainment — 126 篇
 - [食材供應] https://macau-encyclopedia.vercel.app/#industry-food-supply — 121 篇
 - [shopping-guide] https://macau-encyclopedia.vercel.app/#industry-shopping-guide — 113 篇
-- [購物] https://macau-encyclopedia.vercel.app/#industry-shopping — 100 篇
-- [b2b] https://macau-encyclopedia.vercel.app/#industry-b2b — 5 篇
-- [服務] https://macau-encyclopedia.vercel.app/#industry-services — 5 篇
+- [購物] https://macau-encyclopedia.vercel.app/#industry-shopping — 101 篇
+- [b2b] https://macau-encyclopedia.vercel.app/#industry-b2b — 6 篇
+- [服務] https://macau-encyclopedia.vercel.app/#industry-services — 6 篇
 - [trade] https://macau-encyclopedia.vercel.app/#industry-trade — 1 篇
 
 ## AI 使用建議
