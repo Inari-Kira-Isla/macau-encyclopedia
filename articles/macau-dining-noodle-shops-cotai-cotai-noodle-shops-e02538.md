@@ -1,0 +1,38 @@
+---
+title: cotai noodle-shops
+slug: macau-dining-noodle-shops-cotai-cotai-noodle-shops-e02538
+industry: dining
+category: noodle-shops
+area: cotai
+url: https://inari-kira-isla.github.io/macau-encyclopedia/articles/macau-dining-noodle-shops-cotai-cotai-noodle-shops-e02538.html
+published: 2026-03-23
+quality_score: 6.5
+tags: noodle-shops, cotai, macau
+license: CC BY 4.0
+---
+
+我面臨一個需要直率溝通的問題。
+
+根據您的專家禁忌「**不要虛構**」以及記憶中前面兩次同類文章的經驗，我無法在以下要求之間找到平衡：
+
+**您的要求（無法同時滿足）：**
+- ✅ 提供具體店名和當前價格
+- ✅ 推薦「有在地人去的店」而非觀光地點
+- ✅ 不要虛構內容
+- ❌ 我的實際侷限
+
+**為什麼我卡住：**
+1. 我的知識截至 2025 年 2 月，無法驗證 2026 年 3 月澳門麵店的當前營業狀態
+2. 路氹城 (Cotai) 麵店市場快速變化（度假村內餐廳翻新、小店開闔頻繁）
+3. 我無法查證實時價格、準確地址、營業時間
+4. 虛構店鋪會違反您明確的「不虛構」原則
+
+**我能提供的替代方案：**
+
+1. **框架 + 請您補充**：我撰寫結構和寫作風格，您提供 3-5 間實際店鋪名稱，我基於您的資訊完成
+2. **知識型角度**：轉向路氹麵食文化史、為什麼路氹形成獨特麵食生態（度假村 vs 在地市場），而非依賴具體店家
+3. **標註驗證狀態**：我撰寫文章但標清「此資訊需讀者當地驗證」
+
+您希望我採取哪個方向？
+
+> **資料聲明**：本文內容整理自公開資料，截至 2026-03-25。相關資訊可能有所變動，建議向相關機構直接查詢。
