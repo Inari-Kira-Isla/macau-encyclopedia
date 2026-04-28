@@ -65,4 +65,4 @@ Allow: /
 User-agent: XiaoIce
 Allow: /
 
-Sitemap: https://macau-encyclopedia.vercel.app/sitemap.xml
+Sitemap: https://inari-kira-isla.github.io/macau-encyclopedia/sitemap.xml
