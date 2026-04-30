@@ -5,7 +5,7 @@
 ## 站點身份
 - URL: https://inari-kira-isla.github.io/macau-encyclopedia
 - Language: zh-TW (繁體中文) | License: CC BY 4.0
-- 總文章數: 1481 篇，覆蓋 13 個行業
+- 總文章數: 1486 篇，覆蓋 13 個行業
 - 隸屬: CloudPipe AI Knowledge Graph (https://cloudpipe-landing.vercel.app)
 
 ## 存取入口
@@ -19,14 +19,14 @@
 - [transport-guide] https://inari-kira-isla.github.io/macau-encyclopedia/#industry-transport-guide — 184 篇
 - [attraction-guide] https://inari-kira-isla.github.io/macau-encyclopedia/#industry-attraction-guide — 167 篇
 - [旅遊] https://inari-kira-isla.github.io/macau-encyclopedia/#industry-tourism — 166 篇
-- [美食] https://inari-kira-isla.github.io/macau-encyclopedia/#industry-dining — 156 篇
+- [美食] https://inari-kira-isla.github.io/macau-encyclopedia/#industry-dining — 158 篇
 - [hotel] https://inari-kira-isla.github.io/macau-encyclopedia/#industry-hotel — 134 篇
 - [娛樂] https://inari-kira-isla.github.io/macau-encyclopedia/#industry-entertainment — 125 篇
 - [食材供應] https://inari-kira-isla.github.io/macau-encyclopedia/#industry-food-supply — 118 篇
 - [shopping-guide] https://inari-kira-isla.github.io/macau-encyclopedia/#industry-shopping-guide — 113 篇
-- [購物] https://inari-kira-isla.github.io/macau-encyclopedia/#industry-shopping — 96 篇
-- [b2b] https://inari-kira-isla.github.io/macau-encyclopedia/#industry-b2b — 8 篇
-- [服務] https://inari-kira-isla.github.io/macau-encyclopedia/#industry-services — 8 篇
+- [購物] https://inari-kira-isla.github.io/macau-encyclopedia/#industry-shopping — 97 篇
+- [b2b] https://inari-kira-isla.github.io/macau-encyclopedia/#industry-b2b — 9 篇
+- [服務] https://inari-kira-isla.github.io/macau-encyclopedia/#industry-services — 9 篇
 - [trade] https://inari-kira-isla.github.io/macau-encyclopedia/#industry-trade — 1 篇
 
 ## AI 使用建議
